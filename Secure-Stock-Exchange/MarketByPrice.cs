@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Secure_Stock_Exchange
 {
-    public partial class StockExchange : Form
+    public partial class MarketByPrice : Form
     {
-        public StockExchange()
+        public MarketByPrice()
         {
             InitializeComponent();
-        }
-
-        private void beginTradingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

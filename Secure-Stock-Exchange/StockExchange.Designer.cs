@@ -30,17 +30,20 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.marketOpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.watchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stockStateSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marketByOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marketByPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beginTradingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stopTradingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.watchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockStateSummaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marketByOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marketByPriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bidToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.askToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cascadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.horizontalTileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verticalTileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +57,7 @@
             this.windowsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2037, 49);
+            this.menuStrip1.Size = new System.Drawing.Size(2037, 52);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,8 +68,27 @@
             this.stopTradingToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.marketOpenToolStripMenuItem.Name = "marketOpenToolStripMenuItem";
-            this.marketOpenToolStripMenuItem.Size = new System.Drawing.Size(289, 45);
-            this.marketOpenToolStripMenuItem.Text = "Market <<Open>>";
+            this.marketOpenToolStripMenuItem.Size = new System.Drawing.Size(306, 48);
+            this.marketOpenToolStripMenuItem.Text = "Market <<Closed>>";
+            // 
+            // beginTradingToolStripMenuItem
+            // 
+            this.beginTradingToolStripMenuItem.Name = "beginTradingToolStripMenuItem";
+            this.beginTradingToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
+            this.beginTradingToolStripMenuItem.Text = "Begin Trading";
+            this.beginTradingToolStripMenuItem.Click += new System.EventHandler(this.beginTradingToolStripMenuItem_Click);
+            // 
+            // stopTradingToolStripMenuItem
+            // 
+            this.stopTradingToolStripMenuItem.Name = "stopTradingToolStripMenuItem";
+            this.stopTradingToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
+            this.stopTradingToolStripMenuItem.Text = "Stop Trading";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
+            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // watchToolStripMenuItem
             // 
@@ -75,23 +97,8 @@
             this.marketByOrderToolStripMenuItem,
             this.marketByPriceToolStripMenuItem});
             this.watchToolStripMenuItem.Name = "watchToolStripMenuItem";
-            this.watchToolStripMenuItem.Size = new System.Drawing.Size(113, 45);
+            this.watchToolStripMenuItem.Size = new System.Drawing.Size(113, 48);
             this.watchToolStripMenuItem.Text = "Watch";
-            // 
-            // ordersToolStripMenuItem
-            // 
-            this.ordersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bidToolStripMenuItem,
-            this.askToolStripMenuItem});
-            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
-            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(120, 45);
-            this.ordersToolStripMenuItem.Text = "Orders";
-            // 
-            // windowsToolStripMenuItem
-            // 
-            this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
-            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(153, 45);
-            this.windowsToolStripMenuItem.Text = "Windows";
             // 
             // stockStateSummaryToolStripMenuItem
             // 
@@ -111,35 +118,54 @@
             this.marketByPriceToolStripMenuItem.Size = new System.Drawing.Size(411, 46);
             this.marketByPriceToolStripMenuItem.Text = "Market By Price";
             // 
-            // beginTradingToolStripMenuItem
+            // ordersToolStripMenuItem
             // 
-            this.beginTradingToolStripMenuItem.Name = "beginTradingToolStripMenuItem";
-            this.beginTradingToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
-            this.beginTradingToolStripMenuItem.Text = "Begin Trading";
-            // 
-            // stopTradingToolStripMenuItem
-            // 
-            this.stopTradingToolStripMenuItem.Name = "stopTradingToolStripMenuItem";
-            this.stopTradingToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
-            this.stopTradingToolStripMenuItem.Text = "Stop Trading";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
-            this.exitToolStripMenuItem.Text = "Exit";
+            this.ordersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bidToolStripMenuItem,
+            this.askToolStripMenuItem});
+            this.ordersToolStripMenuItem.Name = "ordersToolStripMenuItem";
+            this.ordersToolStripMenuItem.Size = new System.Drawing.Size(120, 48);
+            this.ordersToolStripMenuItem.Text = "Orders";
             // 
             // bidToolStripMenuItem
             // 
             this.bidToolStripMenuItem.Name = "bidToolStripMenuItem";
-            this.bidToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
+            this.bidToolStripMenuItem.Size = new System.Drawing.Size(179, 46);
             this.bidToolStripMenuItem.Text = "Bid";
             // 
             // askToolStripMenuItem
             // 
             this.askToolStripMenuItem.Name = "askToolStripMenuItem";
-            this.askToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
+            this.askToolStripMenuItem.Size = new System.Drawing.Size(179, 46);
             this.askToolStripMenuItem.Text = "Ask";
+            // 
+            // windowsToolStripMenuItem
+            // 
+            this.windowsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cascadeToolStripMenuItem,
+            this.horizontalTileToolStripMenuItem,
+            this.verticalTileToolStripMenuItem});
+            this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
+            this.windowsToolStripMenuItem.Size = new System.Drawing.Size(153, 48);
+            this.windowsToolStripMenuItem.Text = "Windows";
+            // 
+            // cascadeToolStripMenuItem
+            // 
+            this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(323, 46);
+            this.cascadeToolStripMenuItem.Text = "Cascade";
+            // 
+            // horizontalTileToolStripMenuItem
+            // 
+            this.horizontalTileToolStripMenuItem.Name = "horizontalTileToolStripMenuItem";
+            this.horizontalTileToolStripMenuItem.Size = new System.Drawing.Size(323, 46);
+            this.horizontalTileToolStripMenuItem.Text = "Horizontal Tile";
+            // 
+            // verticalTileToolStripMenuItem
+            // 
+            this.verticalTileToolStripMenuItem.Name = "verticalTileToolStripMenuItem";
+            this.verticalTileToolStripMenuItem.Size = new System.Drawing.Size(323, 46);
+            this.verticalTileToolStripMenuItem.Text = "Vertical Tile";
             // 
             // StockExchange
             // 
@@ -172,6 +198,9 @@
         private System.Windows.Forms.ToolStripMenuItem bidToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem askToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem windowsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cascadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem horizontalTileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verticalTileToolStripMenuItem;
     }
 }
 
