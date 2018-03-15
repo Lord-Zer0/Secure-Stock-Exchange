@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 865);
             this.Name = "MarketByPrice";
-            this.Text = "MarketByPrice";
+            this.Text = "Market Depth By Price (<<COMPANY>>)";
             this.ResumeLayout(false);
 
         }

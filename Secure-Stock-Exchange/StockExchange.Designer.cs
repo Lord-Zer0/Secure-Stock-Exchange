@@ -83,12 +83,14 @@
             this.stopTradingToolStripMenuItem.Name = "stopTradingToolStripMenuItem";
             this.stopTradingToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
             this.stopTradingToolStripMenuItem.Text = "Stop Trading";
+            this.stopTradingToolStripMenuItem.Click += new System.EventHandler(this.stopTradingToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(326, 46);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // watchToolStripMenuItem
             // 

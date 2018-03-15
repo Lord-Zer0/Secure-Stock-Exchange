@@ -21,5 +21,16 @@ namespace Secure_Stock_Exchange
         {
             
         }
+
+        private void stopTradingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
