@@ -16,5 +16,43 @@ namespace Secure_Stock_Exchange
         {
             InitializeComponent();
         }
+
+        private void beginTradingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            marketByOrderToolStripMenuItem.Text = "&Market <<Open>>";
+            watchToolStripMenuItem.Visible = true;
+            ordersToolStripMenuItem.Visible = true;
+
+        }
+
+        private void stopTradingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            marketByOrderToolStripMenuItem.Text = "&Market <<Closed>>";
+            watchToolStripMenuItem.Visible = false;
+            ordersToolStripMenuItem.Visible = false;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Cascade all MDI child forms
+            this.LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void horizontalTileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Tile all MDI child forms horizontally
+            this.LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void verticalTileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Tile all MDI child forms vertically
+            this.LayoutMdi(MdiLayout.TileVertical);
+        }
     }
 }
