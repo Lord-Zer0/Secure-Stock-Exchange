@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    public enum orderType { Buy, Sell };
-
     class Order
     {
-        private orderType _orderType;
         public DateTime orderDateTime;
         public int orderSize;
         private double _orderPrice;
@@ -23,16 +20,6 @@ namespace Secure_Stock_Exchange
         double getPrice()
         {
             return this._orderPrice;
-        }
-
-        void setType(orderType ot)
-        {
-            this._orderType = ot;
-        }
-
-        orderType getType()
-        {
-            return this._orderType;
         }
     }
 }

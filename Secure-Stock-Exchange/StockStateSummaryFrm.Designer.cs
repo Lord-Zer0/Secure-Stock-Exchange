@@ -1,6 +1,6 @@
 ﻿namespace Secure_Stock_Exchange
 {
-    partial class StockStateSummary
+    partial class StockStateSummaryFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockStateSummary));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockStateSummaryFrm));
             this.StateSummaryDataGrid = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.StateSummaryDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -43,14 +43,14 @@
             this.StateSummaryDataGrid.Size = new System.Drawing.Size(1704, 546);
             this.StateSummaryDataGrid.TabIndex = 0;
             // 
-            // StockStateSummary
+            // StockStateSummaryFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1728, 570);
             this.Controls.Add(this.StateSummaryDataGrid);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "StockStateSummary";
+            this.Name = "StockStateSummaryFrm";
             this.Text = "Stock State Summary";
             ((System.ComponentModel.ISupportInitialize)(this.StateSummaryDataGrid)).EndInit();
             this.ResumeLayout(false);

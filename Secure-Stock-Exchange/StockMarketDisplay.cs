@@ -8,6 +8,6 @@ namespace Secure_Stock_Exchange
 {
     abstract class StockMarketDisplay
     {
-        public abstract int Update(RealTimeData s);
+        public abstract void Update(RealTimeData s);
     }
 }
