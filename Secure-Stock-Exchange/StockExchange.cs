@@ -54,5 +54,15 @@ namespace Secure_Stock_Exchange
             //Tile all MDI child forms vertically
             this.LayoutMdi(MdiLayout.TileVertical);
         }
+
+        private void stockStateSummaryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Open a new instance of stock state summary
+            StockStateSummary sssChild = new StockStateSummary();
+            //Set parent form
+            sssChild.MdiParent = this;
+            //Display sss form
+            sssChild.Show();
+        }
     }
 }

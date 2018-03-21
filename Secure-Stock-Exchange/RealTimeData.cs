@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    abstract class RealTimeData : StockMarket
+    class RealTimeData : StockMarket
     {
         //tradingDateStockIndex::NYI
         private List<Company> members;
