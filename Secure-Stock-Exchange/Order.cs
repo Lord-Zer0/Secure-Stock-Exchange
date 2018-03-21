@@ -6,18 +6,39 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    class Order
+    abstract class Order
+    {
+        public abstract double getPrice();
+        public abstract void setPrice(double price);
+    }
+
+    class BuyOrder : Order
     {
         public DateTime orderDateTime;
         public int orderSize;
         private double _orderPrice;
-
-        void setPrice(double price)
+        public override void setPrice(double price)
         {
             this._orderPrice = price;
         }
 
-        double getPrice()
+        public override double getPrice()
+        {
+            return this._orderPrice;
+        }
+    }
+
+    class SellOrder : Order
+    {
+        public DateTime orderDateTime;
+        public int orderSize;
+        private double _orderPrice;
+        public override void setPrice(double price)
+        {
+            this._orderPrice = price;
+        }
+
+        public override double getPrice()
         {
             return this._orderPrice;
         }
