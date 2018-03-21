@@ -12,6 +12,7 @@ namespace Secure_Stock_Exchange
 {
     public partial class MarketByOrderFrm : Form
     {
+        private MarketByOrder _mbo;
         public MarketByOrderFrm()
         {
             InitializeComponent();

@@ -67,12 +67,14 @@
             // 
             // submitBtn
             // 
+            this.submitBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.submitBtn.Location = new System.Drawing.Point(180, 397);
             this.submitBtn.Name = "submitBtn";
             this.submitBtn.Size = new System.Drawing.Size(160, 47);
             this.submitBtn.TabIndex = 3;
             this.submitBtn.Text = "Submit";
             this.submitBtn.UseVisualStyleBackColor = true;
+            this.submitBtn.Click += new System.EventHandler(this.submitBtn_Click);
             // 
             // cancelBtn
             // 

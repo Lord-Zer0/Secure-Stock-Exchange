@@ -12,6 +12,7 @@ namespace Secure_Stock_Exchange
 {
     public partial class MarketByPriceFrm : Form
     {
+        private MarketByPrice _mbp;
         public MarketByPriceFrm()
         {
             InitializeComponent();

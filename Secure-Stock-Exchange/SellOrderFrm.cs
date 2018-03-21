@@ -12,9 +12,15 @@ namespace Secure_Stock_Exchange
 {
     public partial class SellOrderFrm : Form
     {
+        private SellOrder _so;
         public SellOrderFrm()
         {
             InitializeComponent();
+        }
+
+        private void submitBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
