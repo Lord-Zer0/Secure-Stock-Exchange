@@ -16,10 +16,9 @@ namespace Secure_Stock_Exchange
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StockExchange());
             //Create RealtimeData
-            RealTimeData rtd = new RealTimeData();
             //Create StockMarketDisplay
+            Application.Run(new StockExchange());
             //Start Trading Day
         }
     }

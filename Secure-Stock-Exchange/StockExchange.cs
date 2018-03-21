@@ -12,9 +12,11 @@ namespace Secure_Stock_Exchange
 {
     public partial class StockExchange : Form
     {
+        private RealTimeData _rtd;
         public StockExchange()
         {
             InitializeComponent();
+            this._rtd = new RealTimeData();
         }
 
         private void beginTradingToolStripMenuItem_Click(object sender, EventArgs e)
