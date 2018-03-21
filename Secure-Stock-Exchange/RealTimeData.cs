@@ -6,9 +6,23 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    abstract class RealTimeData
+    abstract class RealTimeData : StockMarket
     {
-        //private int tradingDateStockIndex; // not implemented
-        //private List<Company> members;
+        //tradingDateStockIndex::NYI
+        private List<Company> members;
+
+        public override void Register(StockMarketDisplay o)
+        {
+            throw new NotImplementedException();
+        }
+        public override void UnRegister(StockMarketDisplay o)
+        {
+            throw new NotImplementedException();
+        }
+        public override void Notify()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }
