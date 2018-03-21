@@ -45,19 +45,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuyOrderFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuyOrderFrm.Designer.cs">
+      <DependentUpon>BuyOrderFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SellOrderFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellOrderFrm.Designer.cs">
+      <DependentUpon>SellOrderFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StockMarketDisplayParts.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Company.cs" />
-    <Compile Include="MarketByOrder.cs">
+    <Compile Include="MarketByOrderFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarketByOrder.Designer.cs">
-      <DependentUpon>MarketByOrder.cs</DependentUpon>
+    <Compile Include="MarketByOrderFrm.Designer.cs">
+      <DependentUpon>MarketByOrderFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MarketByPrice.cs">
+    <Compile Include="MarketByPriceFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MarketByPrice.Designer.cs">
-      <DependentUpon>MarketByPrice.cs</DependentUpon>
+    <Compile Include="MarketByPriceFrm.Designer.cs">
+      <DependentUpon>MarketByPriceFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="RealTimeData.cs" />
     <Compile Include="StockExchange.cs">
@@ -69,17 +82,21 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StockMarket.cs" />
-    <Compile Include="StockStateSummary.cs">
+    <Compile Include="StockMarketDisplay.cs" />
+    <Compile Include="StockStateSummaryFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StockStateSummary.Designer.cs">
-      <DependentUpon>StockStateSummary.cs</DependentUpon>
+    <Compile Include="StockStateSummaryFrm.Designer.cs">
+      <DependentUpon>StockStateSummaryFrm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MarketByOrder.resx">
-      <DependentUpon>MarketByOrder.cs</DependentUpon>
+    <EmbeddedResource Include="BuyOrderFrm.resx">
+      <DependentUpon>BuyOrderFrm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MarketByPrice.resx">
-      <DependentUpon>MarketByPrice.cs</DependentUpon>
+    <EmbeddedResource Include="MarketByOrderFrm.resx">
+      <DependentUpon>MarketByOrderFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MarketByPriceFrm.resx">
+      <DependentUpon>MarketByPriceFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,11 +107,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SellOrderFrm.resx">
+      <DependentUpon>SellOrderFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StockExchange.resx">
       <DependentUpon>StockExchange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StockStateSummary.resx">
-      <DependentUpon>StockStateSummary.cs</DependentUpon>
+    <EmbeddedResource Include="StockStateSummaryFrm.resx">
+      <DependentUpon>StockStateSummaryFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
