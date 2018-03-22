@@ -10,9 +10,10 @@ using System.Windows.Forms;
 
 namespace Secure_Stock_Exchange
 {
-    public partial class MarketByPrice : Form
+    public partial class StockStateSummaryFrm : Form
     {
-        public MarketByPrice()
+        private StockStateSummary _sss;
+        public StockStateSummaryFrm()
         {
             InitializeComponent();
         }
