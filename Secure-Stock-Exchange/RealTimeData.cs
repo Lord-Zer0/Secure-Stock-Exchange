@@ -9,8 +9,8 @@ namespace Secure_Stock_Exchange
     class RealTimeData : StockMarket
     {
         //tradingDateStockIndex::NYI
-        private List<Company> members;
-        private List<StockMarketDisplay> display;
+        public List<Company> members;
+        public List<StockMarketDisplay> display;
         public RealTimeData()
         {
             // Here we can hard code the data we need
@@ -40,6 +40,5 @@ namespace Secure_Stock_Exchange
                 window.Update(this);
             }
         }
-
     }
 }

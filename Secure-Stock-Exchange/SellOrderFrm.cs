@@ -16,6 +16,7 @@ namespace Secure_Stock_Exchange
         public SellOrderFrm()
         {
             InitializeComponent();
+            this._so = new SellOrder();
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
