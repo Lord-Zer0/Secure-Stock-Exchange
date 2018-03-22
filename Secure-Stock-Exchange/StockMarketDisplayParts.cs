@@ -8,20 +8,22 @@ namespace Secure_Stock_Exchange
 {
     class StockStateSummary : StockMarketDisplay
     {
+        // EACH stock has its own StockStateSummary
+        // SSSForm observes data from all SSS entities
         public string companyName;
         public string companySymbol;
         public double openPrice;
         public double currentPrice;
         public double priceChange;
         public int changePercentage;
-        public StockStateSummary(RealTimeData s)
-        {
-
-        }
         public StockStateSummary(Company c)
         {
             this.companyName = c.companyName;
             this.companySymbol = c.companySymbol;
+            this.openPrice = c.getLastPrice();
+            this.currentPrice = c.getLastPrice();
+            this.priceChange = 0.0;
+            this.changePercentage = 0;
         }
         public override void Update(RealTimeData s)
         {
@@ -37,7 +39,7 @@ namespace Secure_Stock_Exchange
         public int askVolume;
         public MarketByOrder(Company c)
         {
-
+            
         }
         public override void Update(RealTimeData s)
         {

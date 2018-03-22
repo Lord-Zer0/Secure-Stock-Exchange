@@ -29,12 +29,12 @@ namespace Secure_Stock_Exchange
             this.orders = new List<Order>();
         }
         
-        void setLastPrice(double price)
+        public void setLastPrice(double price)
         {
             this._lastPrice = price;
         }
 
-        double getLastPrice()
+        public double getLastPrice()
         {
             return this._lastPrice;
         }
