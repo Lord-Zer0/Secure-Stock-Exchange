@@ -17,6 +17,10 @@ namespace Secure_Stock_Exchange
         public DateTime orderDateTime;
         public int orderSize;
         private double _orderPrice;
+        public BuyOrder()
+        {
+
+        }
         public override void setPrice(double price)
         {
             this._orderPrice = price;
@@ -33,6 +37,10 @@ namespace Secure_Stock_Exchange
         public DateTime orderDateTime;
         public int orderSize;
         private double _orderPrice;
+        public SellOrder()
+        {
+
+        }
         public override void setPrice(double price)
         {
             this._orderPrice = price;

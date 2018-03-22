@@ -18,12 +18,12 @@ namespace Secure_Stock_Exchange
             this.members = new List<Company>();
             this.display = new List<StockMarketDisplay>();
             // Declare Companies
-            Company msft = new Company("Microsoft Corporation", 46.13);
-            Company aapl = new Company("Apple Inc.", 105.22);
-            Company fb = new Company("Facebook Inc.", 80.67);
+            Company msft = new Company("Microsoft Corporation", "MSFT", 46.13);
+            Company appl = new Company("Apple Inc.", "APPL", 105.22);
+            Company fb = new Company("Facebook Inc.", "FB", 80.67);
             // Add members to list
             this.members.Add(msft);
-            this.members.Add(aapl);
+            this.members.Add(appl);
             this.members.Add(fb);
         }
 

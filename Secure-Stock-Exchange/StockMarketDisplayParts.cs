@@ -18,6 +18,11 @@ namespace Secure_Stock_Exchange
         {
 
         }
+        public StockStateSummary(Company c)
+        {
+            this.companyName = c.companyName;
+            this.companySymbol = c.companySymbol;
+        }
         public override void Update(RealTimeData s)
         {
             throw new NotImplementedException();
@@ -30,7 +35,7 @@ namespace Secure_Stock_Exchange
         public int bidVolume;
         public double askPrice;
         public int askVolume;
-        public MarketByOrder(RealTimeData s)
+        public MarketByOrder(Company c)
         {
 
         }
@@ -48,7 +53,7 @@ namespace Secure_Stock_Exchange
         public int askNo;
         public int askTotalVolume;
         public int askTotalPrice;
-        public MarketByPrice(RealTimeData s)
+        public MarketByPrice(Company c)
         {
 
         }

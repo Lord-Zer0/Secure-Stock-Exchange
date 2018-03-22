@@ -9,6 +9,7 @@ namespace Secure_Stock_Exchange
     class Company
     {
         public string companyName;
+        public string companySymbol;
         private double _lastPrice;
         public List<Order> orders;
 
@@ -16,18 +17,18 @@ namespace Secure_Stock_Exchange
         {
             this.companyName = "New Company";
             this._lastPrice = 0.00;
+            this.companySymbol = "NEWC";
             this.orders = new List<Order>();
         }
 
-        public Company(string name, double startPrice)
+        public Company(string name, string symbol, double startPrice)
         {
             this.companyName = name;
+            this.companySymbol = symbol;
             this._lastPrice = startPrice;
             this.orders = new List<Order>();
         }
         
-
-
         void setLastPrice(double price)
         {
             this._lastPrice = price;
