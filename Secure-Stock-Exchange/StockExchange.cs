@@ -26,13 +26,13 @@ namespace Secure_Stock_Exchange
             watchToolStripMenuItem.Visible = true;
             ordersToolStripMenuItem.Visible = true;
             // get information from companylist
-            ToolStripMenuItem msftPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByPrice_Click);
-            ToolStripMenuItem aaplPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByPrice_Click);
-            ToolStripMenuItem fbPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByPrice_Click);
+            //ToolStripMenuItem msftPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByPrice_Click);
+            //ToolStripMenuItem aaplPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByPrice_Click);
+            //ToolStripMenuItem fbPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByPrice_Click);
 
-            ToolStripMenuItem msftOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByOrder_Click);
-            ToolStripMenuItem aaplOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByOrder_Click);
-            ToolStripMenuItem fbOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByOrder_Click);
+            //ToolStripMenuItem msftOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByOrder_Click);
+            //ToolStripMenuItem aaplOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByOrder_Click);
+            //ToolStripMenuItem fbOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByOrder_Click);
         }
 
         private void menuByPrice_Click(object sender, EventArgs e)
@@ -98,5 +98,6 @@ namespace Secure_Stock_Exchange
             //Display sss form
             sssChild.Show();
         }
+
     }
 }

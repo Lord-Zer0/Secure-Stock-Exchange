@@ -14,6 +14,9 @@ namespace Secure_Stock_Exchange
         public RealTimeData()
         {
             // Here we can hard code the data we need
+            // Initialize Lists
+            this.members = new List<Company>();
+            this.display = new List<StockMarketDisplay>();
             // Declare Companies
             Company msft = new Company("Microsoft Corporation", 46.13);
             Company aapl = new Company("Apple Inc.", 105.22);
