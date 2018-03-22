@@ -12,10 +12,18 @@ namespace Secure_Stock_Exchange
         private double _lastPrice;
         public List<Order> orders;
 
+        public Company()
+        {
+            this.companyName = "New Company";
+            this._lastPrice = 0.00;
+            this.orders = new List<Order>();
+        }
+
         public Company(string name, double startPrice)
         {
             this.companyName = name;
             this._lastPrice = startPrice;
+            this.orders = new List<Order>();
         }
         
 
