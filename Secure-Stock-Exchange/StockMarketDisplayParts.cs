@@ -14,7 +14,10 @@ namespace Secure_Stock_Exchange
         public double currentPrice;
         public double priceChange;
         public int changePercentage;
+        public StockStateSummary(RealTimeData s)
+        {
 
+        }
         public override void Update(RealTimeData s)
         {
             throw new NotImplementedException();
@@ -27,6 +30,10 @@ namespace Secure_Stock_Exchange
         public int bidVolume;
         public double askPrice;
         public int askVolume;
+        public MarketByOrder(RealTimeData s)
+        {
+
+        }
         public override void Update(RealTimeData s)
         {
             throw new NotImplementedException();
@@ -41,6 +48,10 @@ namespace Secure_Stock_Exchange
         public int askNo;
         public int askTotalVolume;
         public int askTotalPrice;
+        public MarketByPrice(RealTimeData s)
+        {
+
+        }
         public override void Update(RealTimeData s)
         {
             throw new NotImplementedException();
