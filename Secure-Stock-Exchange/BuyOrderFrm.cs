@@ -12,6 +12,7 @@ namespace Secure_Stock_Exchange
 {
     public partial class BuyOrderFrm : Form
     {
+
         public BuyOrderFrm()
         {
             InitializeComponent();
@@ -19,7 +20,9 @@ namespace Secure_Stock_Exchange
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-
+            string companyName = this.selectShareList.Text;
+            int numShares = this.numSharesTxt.Text;
         }
+
     }
 }
