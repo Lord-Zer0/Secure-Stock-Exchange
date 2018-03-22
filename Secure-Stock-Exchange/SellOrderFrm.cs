@@ -19,7 +19,9 @@ namespace Secure_Stock_Exchange
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
-
+            string companyName = this.selectShareList.Text;
+            int numShares = Convert.ToInt32(this.numSharesTxt.Text);
+            double sellPrice = Convert.ToDouble(this.salePriceLbl.Text);
         }
 
         private void cancelBtn_Click(object sender, EventArgs e)

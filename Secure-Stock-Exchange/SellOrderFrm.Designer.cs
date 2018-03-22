@@ -33,7 +33,7 @@
             this.salePriceLbl = new System.Windows.Forms.Label();
             this.submitBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.selectShareList = new System.Windows.Forms.ComboBox();
             this.numSharesTxt = new System.Windows.Forms.MaskedTextBox();
             this.salePriceTxt = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
@@ -86,18 +86,18 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // comboBox1
+            // selectShareList
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.selectShareList.FormattingEnabled = true;
+            this.selectShareList.Items.AddRange(new object[] {
             "Microsoft Corporation",
             "Apple Inc.",
             "Facebook Inc."});
-            this.comboBox1.Location = new System.Drawing.Point(330, 67);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(403, 39);
-            this.comboBox1.TabIndex = 7;
-            this.comboBox1.Text = "Microsoft Corporation";
+            this.selectShareList.Location = new System.Drawing.Point(330, 67);
+            this.selectShareList.Name = "selectShareList";
+            this.selectShareList.Size = new System.Drawing.Size(403, 39);
+            this.selectShareList.TabIndex = 7;
+            this.selectShareList.Text = "Microsoft Corporation";
             // 
             // numSharesTxt
             // 
@@ -125,7 +125,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.salePriceTxt);
             this.Controls.Add(this.numSharesTxt);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.selectShareList);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.submitBtn);
             this.Controls.Add(this.salePriceLbl);
@@ -148,7 +148,7 @@
         private System.Windows.Forms.Label salePriceLbl;
         private System.Windows.Forms.Button submitBtn;
         private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox selectShareList;
         private System.Windows.Forms.MaskedTextBox numSharesTxt;
         private System.Windows.Forms.MaskedTextBox salePriceTxt;
     }
