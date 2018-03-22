@@ -39,7 +39,7 @@ namespace Secure_Stock_Exchange
         public int askVolume = 0;
         public MarketByOrder(Company c)
         {
-
+            
         }
         public override void Update(RealTimeData s)
         {
