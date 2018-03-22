@@ -33,13 +33,13 @@ namespace Secure_Stock_Exchange
 
     class MarketByOrder : StockMarketDisplay
     {
-        public double bidPrice;
-        public int bidVolume;
-        public double askPrice;
-        public int askVolume;
+        public double bidPrice = 0.0;
+        public int bidVolume = 0;
+        public double askPrice = 0.0;
+        public int askVolume = 0;
         public MarketByOrder(Company c)
         {
-            
+
         }
         public override void Update(RealTimeData s)
         {
@@ -49,12 +49,12 @@ namespace Secure_Stock_Exchange
 
     class MarketByPrice : StockMarketDisplay
     {
-        public int bidNo;
-        public int bidTotalVolume;
-        public double bidTotalPrice;
-        public int askNo;
-        public int askTotalVolume;
-        public int askTotalPrice;
+        public int bidNo = 0;
+        public int bidTotalVolume = 0;
+        public double bidTotalPrice = 0.0;
+        public int askNo = 0;
+        public int askTotalVolume = 0;
+        public int askTotalPrice = 0;
         public MarketByPrice(Company c)
         {
 

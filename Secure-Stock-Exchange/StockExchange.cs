@@ -97,8 +97,13 @@ namespace Secure_Stock_Exchange
         {
             //Open a new instance of stock state summary
             StockStateSummaryFrm sssChild = new StockStateSummaryFrm();
-            //Create instance of data class
-            StockStateSummary mbp = new StockStateSummary(this._rtd);
+            // Collect all instances of data classes
+            List<StockStateSummary> sssList = new List<StockStateSummary>();
+            foreach (Company m in this._rtd.members)
+            {
+                StockStateSummary sssi = new StockStateSummary(m);
+                sssList.Add(sssi);
+            }
             //Set parent form
             sssChild.MdiParent = this;
             //Display sss form
