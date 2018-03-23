@@ -117,6 +117,9 @@
       <DependentUpon>StockStateSummaryFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\MarketByOrder.datasource" />
+    <None Include="Properties\DataSources\MarketByPrice.datasource" />
+    <None Include="Properties\DataSources\StockStateSummary.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

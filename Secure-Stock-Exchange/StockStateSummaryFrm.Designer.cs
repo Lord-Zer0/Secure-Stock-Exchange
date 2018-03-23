@@ -28,20 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockStateSummaryFrm));
             this.StateSummaryDataGrid = new System.Windows.Forms.DataGridView();
+            this.stockStateSummaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.StateSummaryDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockStateSummaryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // StateSummaryDataGrid
             // 
+            this.StateSummaryDataGrid.AutoGenerateColumns = false;
             this.StateSummaryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StateSummaryDataGrid.DataSource = this.stockStateSummaryBindingSource;
             this.StateSummaryDataGrid.Location = new System.Drawing.Point(12, 12);
             this.StateSummaryDataGrid.Name = "StateSummaryDataGrid";
             this.StateSummaryDataGrid.ReadOnly = true;
             this.StateSummaryDataGrid.RowTemplate.Height = 40;
             this.StateSummaryDataGrid.Size = new System.Drawing.Size(1704, 546);
             this.StateSummaryDataGrid.TabIndex = 0;
+            // 
+            // stockStateSummaryBindingSource
+            // 
+            this.stockStateSummaryBindingSource.DataSource = typeof(Secure_Stock_Exchange.StockStateSummary);
             // 
             // StockStateSummaryFrm
             // 
@@ -54,6 +63,7 @@
             this.Name = "StockStateSummaryFrm";
             this.Text = "Stock State Summary";
             ((System.ComponentModel.ISupportInitialize)(this.StateSummaryDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockStateSummaryBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -61,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView StateSummaryDataGrid;
+        private System.Windows.Forms.BindingSource stockStateSummaryBindingSource;
     }
 }

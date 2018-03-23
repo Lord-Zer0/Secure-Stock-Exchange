@@ -28,36 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketByOrderFrm));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.OrderDataGrid = new System.Windows.Forms.DataGridView();
+            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marketByOrderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // OrderDataGrid
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.Size = new System.Drawing.Size(903, 840);
-            this.dataGridView1.TabIndex = 0;
+            this.OrderDataGrid.AutoGenerateColumns = false;
+            this.OrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.OrderDataGrid.DataSource = this.marketByOrderBindingSource;
+            this.OrderDataGrid.Location = new System.Drawing.Point(12, 12);
+            this.OrderDataGrid.Name = "OrderDataGrid";
+            this.OrderDataGrid.RowTemplate.Height = 40;
+            this.OrderDataGrid.Size = new System.Drawing.Size(903, 840);
+            this.OrderDataGrid.TabIndex = 0;
+            // 
+            // marketByOrderBindingSource
+            // 
+            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
             // 
             // MarketByOrderFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 864);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.OrderDataGrid);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MarketByOrderFrm";
-            this.Text = "Market Depth By Order:";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "Market Depth By Order: ";
+            ((System.ComponentModel.ISupportInitialize)(this.OrderDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.marketByOrderBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView OrderDataGrid;
+        private System.Windows.Forms.BindingSource marketByOrderBindingSource;
     }
 }
