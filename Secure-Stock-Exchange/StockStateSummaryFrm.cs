@@ -12,10 +12,16 @@ namespace Secure_Stock_Exchange
 {
     public partial class StockStateSummaryFrm : Form
     {
-        private StockStateSummary _sss;
+
         public StockStateSummaryFrm()
         {
             InitializeComponent();
+
+        }
+
+        private void StockStateSummaryFrm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

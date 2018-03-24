@@ -106,6 +106,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SellOrderFrm.resx">
       <DependentUpon>SellOrderFrm.cs</DependentUpon>
@@ -117,6 +118,9 @@
       <DependentUpon>StockStateSummaryFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\MarketByOrder.datasource" />
+    <None Include="Properties\DataSources\MarketByPrice.datasource" />
+    <None Include="Properties\DataSources\StockStateSummary.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +133,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noChange.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\up.bmp" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

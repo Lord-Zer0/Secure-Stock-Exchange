@@ -12,16 +12,35 @@ namespace Secure_Stock_Exchange
 {
     public partial class SellOrderFrm : Form
     {
-        private SellOrder _so;
-        public SellOrderFrm()
+        private List<Company> _stocks;
+        public SellOrderFrm(List<Company> m)
         {
             InitializeComponent();
-            this._so = new SellOrder();
+            this._stocks = m;
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            
+            try
+            {
+                //Fetch form data
+                string companyName = this.selectShareList.Text;
+                int numShares = Convert.ToInt32(this.numSharesTxt.Text);
+                double sellPrice = Convert.ToDouble(this.salePriceTxt.Text);
+                //Create new sell Order
+                SellOrder sell = new SellOrder(numShares, sellPrice);
+                //Register sell order
+                
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void cancelBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

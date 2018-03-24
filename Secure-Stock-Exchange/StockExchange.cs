@@ -25,29 +25,29 @@ namespace Secure_Stock_Exchange
             marketByOrderToolStripMenuItem.Text = "&Market <<Open>>";
             watchToolStripMenuItem.Visible = true;
             ordersToolStripMenuItem.Visible = true;
-            // get information from companylist
-            ToolStripMenuItem msftPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByPrice_Click);
-            ToolStripMenuItem aaplPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByPrice_Click);
-            ToolStripMenuItem fbPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByPrice_Click);
-
-            ToolStripMenuItem msftOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByOrder_Click);
-            ToolStripMenuItem aaplOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByOrder_Click);
-            ToolStripMenuItem fbOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByOrder_Click);
         }
 
-        private void menuByPrice_Click(object sender, EventArgs e)
+        private void menuByPrice(Company c)
         {
             //Open a new instance of menu by price for sender
             MarketByPriceFrm mbpChild = new MarketByPriceFrm();
+            //Change the form text
+            mbpChild.Text += c.companyName;
+            //Create instance of data class
+            MarketByPrice mbp = new MarketByPrice(c);
             //Set parent form
             mbpChild.MdiParent = this;
             //Display mbp form
             mbpChild.Show();
         }
-        private void menuByOrder_Click(object sender, EventArgs e)
+        private void menuByOrder(Company c)
         {
             //Open a new instance of menu by order for sender
             MarketByOrderFrm mboChild = new MarketByOrderFrm();
+            //Change the form text
+            mboChild.Text += c.companyName;
+            //Create instance of data class
+            MarketByOrder mbp = new MarketByOrder(c);
             //Set parent form
             mboChild.MdiParent = this;
             //Display mbo form
@@ -93,10 +93,68 @@ namespace Secure_Stock_Exchange
         {
             //Open a new instance of stock state summary
             StockStateSummaryFrm sssChild = new StockStateSummaryFrm();
+            // Collect all instances of data classes
+            List<StockStateSummary> sssList = new List<StockStateSummary>();
+            foreach (Company m in this._rtd.members)
+            {
+                StockStateSummary sssi = new StockStateSummary(m);
+                sssList.Add(sssi);
+            }
             //Set parent form
             sssChild.MdiParent = this;
             //Display sss form
             sssChild.Show();
+        }
+
+        private void msftOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Alternate method: //menuByOrder(this._rtd.members.Find(company => company.companyName == "Microsoft Corporation"));
+            menuByOrder(this._rtd.members[0]);
+        }
+
+        private void aaplOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuByOrder(this._rtd.members[1]);
+        }
+
+        private void fbOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuByOrder(this._rtd.members[2]);
+        }
+
+        private void msftPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuByPrice(this._rtd.members[0]);
+        }
+
+        private void aaplPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuByPrice(this._rtd.members[1]);
+        }
+
+        private void fbPriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuByPrice(this._rtd.members[2]);
+        }
+
+        private void bidToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Open a new instance of buy order 
+            BuyOrderFrm boChild = new BuyOrderFrm(this._rtd.members);
+            //Set parent form
+            boChild.MdiParent = this;
+            //Display sss form
+            boChild.Show();
+        }
+
+        private void askToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Open a new instance of sell order
+            SellOrderFrm soChild = new SellOrderFrm(this._rtd.members);
+            //Set parent form
+            soChild.MdiParent = this;
+            //Display sss form
+            soChild.Show();
         }
     }
 }
