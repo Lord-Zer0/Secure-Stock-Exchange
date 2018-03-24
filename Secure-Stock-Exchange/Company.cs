@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    class Company
+    public class Company
     {
         public string companyName;
         public string companySymbol;

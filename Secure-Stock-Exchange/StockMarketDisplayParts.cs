@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    class StockStateSummary : StockMarketDisplay
+    public class StockStateSummary : StockMarketDisplay
     {
         // EACH stock has its own StockStateSummary
         // SSSForm observes data from all SSS entities
@@ -27,11 +27,17 @@ namespace Secure_Stock_Exchange
         }
         public override void Update(RealTimeData s)
         {
-            throw new NotImplementedException();
+            foreach(Company m in s.members)
+            {
+                if(m.companyName == this.companyName)
+                {
+                    
+                }
+            }
         }
     }
 
-    class MarketByOrder : StockMarketDisplay
+    public class MarketByOrder : StockMarketDisplay
     {
         public double bidPrice = 0.0;
         public int bidVolume = 0;
@@ -47,7 +53,7 @@ namespace Secure_Stock_Exchange
         }
     }
 
-    class MarketByPrice : StockMarketDisplay
+    public class MarketByPrice : StockMarketDisplay
     {
         public int bidNo = 0;
         public int bidTotalVolume = 0;

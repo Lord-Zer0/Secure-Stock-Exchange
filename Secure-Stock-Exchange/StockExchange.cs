@@ -25,14 +25,6 @@ namespace Secure_Stock_Exchange
             marketByOrderToolStripMenuItem.Text = "&Market <<Open>>";
             watchToolStripMenuItem.Visible = true;
             ordersToolStripMenuItem.Visible = true;
-            // get information from companylist
-            //ToolStripMenuItem msftPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByPrice_Click);
-            //ToolStripMenuItem aaplPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByPrice_Click);
-            //ToolStripMenuItem fbPriceToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByPrice_Click);
-
-            //ToolStripMenuItem msftOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[0].companyName, null, menuByOrder_Click);
-            //ToolStripMenuItem aaplOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[1].companyName, null, menuByOrder_Click);
-            //ToolStripMenuItem fbOrderToolStripMenuItem = new ToolStripMenuItem(this._rtd.members[2].companyName, null, menuByOrder_Click);
         }
 
         private void menuByPrice(Company c)
@@ -148,9 +140,7 @@ namespace Secure_Stock_Exchange
         private void bidToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Open a new instance of buy order 
-            BuyOrderFrm boChild = new BuyOrderFrm();
-            //Create instance of data class
-            BuyOrder bo = new BuyOrder();
+            BuyOrderFrm boChild = new BuyOrderFrm(this._rtd.members);
             //Set parent form
             boChild.MdiParent = this;
             //Display sss form
@@ -160,9 +150,7 @@ namespace Secure_Stock_Exchange
         private void askToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Open a new instance of sell order
-            SellOrderFrm soChild = new SellOrderFrm();
-            //Create instance of data class
-            SellOrder so = new SellOrder();
+            SellOrderFrm soChild = new SellOrderFrm(this._rtd.members);
             //Set parent form
             soChild.MdiParent = this;
             //Display sss form

@@ -34,7 +34,7 @@
             this.buyPriceLbl = new System.Windows.Forms.Label();
             this.numSharesLbl = new System.Windows.Forms.Label();
             this.selectShareLbl = new System.Windows.Forms.Label();
-            this.salePriceTxt = new System.Windows.Forms.MaskedTextBox();
+            this.buyPriceTxt = new System.Windows.Forms.MaskedTextBox();
             this.numSharesTxt = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
@@ -100,14 +100,14 @@
             this.selectShareLbl.TabIndex = 8;
             this.selectShareLbl.Text = "Select Share to Buy";
             // 
-            // salePriceTxt
+            // buyPriceTxt
             // 
-            this.salePriceTxt.Location = new System.Drawing.Point(324, 292);
-            this.salePriceTxt.Mask = "999999.00";
-            this.salePriceTxt.Name = "salePriceTxt";
-            this.salePriceTxt.Size = new System.Drawing.Size(190, 38);
-            this.salePriceTxt.TabIndex = 17;
-            this.salePriceTxt.ValidatingType = typeof(int);
+            this.buyPriceTxt.Location = new System.Drawing.Point(324, 292);
+            this.buyPriceTxt.Mask = "999999.00";
+            this.buyPriceTxt.Name = "buyPriceTxt";
+            this.buyPriceTxt.Size = new System.Drawing.Size(190, 38);
+            this.buyPriceTxt.TabIndex = 17;
+            this.buyPriceTxt.ValidatingType = typeof(int);
             // 
             // numSharesTxt
             // 
@@ -124,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(838, 532);
             this.ControlBox = false;
-            this.Controls.Add(this.salePriceTxt);
+            this.Controls.Add(this.buyPriceTxt);
             this.Controls.Add(this.numSharesTxt);
             this.Controls.Add(this.selectShareList);
             this.Controls.Add(this.cancelBtn);
@@ -147,7 +147,7 @@
         private System.Windows.Forms.Label buyPriceLbl;
         private System.Windows.Forms.Label numSharesLbl;
         private System.Windows.Forms.Label selectShareLbl;
-        private System.Windows.Forms.MaskedTextBox salePriceTxt;
+        private System.Windows.Forms.MaskedTextBox buyPriceTxt;
         private System.Windows.Forms.MaskedTextBox numSharesTxt;
     }
 }

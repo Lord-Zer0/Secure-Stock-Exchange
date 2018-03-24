@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketByOrderFrm));
             this.OrderDataGrid = new System.Windows.Forms.DataGridView();
-            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SellLabel = new System.Windows.Forms.Label();
             this.buyLabel = new System.Windows.Forms.Label();
+            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buyVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buyPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,10 +58,6 @@
             this.OrderDataGrid.Size = new System.Drawing.Size(903, 781);
             this.OrderDataGrid.TabIndex = 0;
             // 
-            // marketByOrderBindingSource
-            // 
-            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
-            // 
             // SellLabel
             // 
             this.SellLabel.AutoSize = true;
@@ -82,29 +78,41 @@
             this.buyLabel.TabIndex = 3;
             this.buyLabel.Text = "Buy";
             // 
+            // marketByOrderBindingSource
+            // 
+            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
+            // 
             // buyVolume
             // 
+            this.buyVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.buyVolume.HeaderText = "Volume";
             this.buyVolume.Name = "buyVolume";
             this.buyVolume.ReadOnly = true;
+            this.buyVolume.Width = 166;
             // 
             // buyPrice
             // 
+            this.buyPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.buyPrice.HeaderText = "Price";
             this.buyPrice.Name = "buyPrice";
             this.buyPrice.ReadOnly = true;
+            this.buyPrice.Width = 134;
             // 
             // sellPrice
             // 
+            this.sellPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.sellPrice.HeaderText = "Price";
             this.sellPrice.Name = "sellPrice";
             this.sellPrice.ReadOnly = true;
+            this.sellPrice.Width = 134;
             // 
             // sellVolume
             // 
+            this.sellVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.sellVolume.HeaderText = "Volume";
             this.sellVolume.Name = "sellVolume";
             this.sellVolume.ReadOnly = true;
+            this.sellVolume.Width = 166;
             // 
             // MarketByOrderFrm
             // 
@@ -114,6 +122,7 @@
             this.Controls.Add(this.SellLabel);
             this.Controls.Add(this.buyLabel);
             this.Controls.Add(this.OrderDataGrid);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MarketByOrderFrm";
             this.Text = "Market Depth By Order: ";

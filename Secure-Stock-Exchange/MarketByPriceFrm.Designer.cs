@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketByPriceFrm));
             this.PriceDataGrid = new System.Windows.Forms.DataGridView();
-            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marketByPriceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buyLabel = new System.Windows.Forms.Label();
             this.SellLabel = new System.Windows.Forms.Label();
+            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.marketByPriceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buyVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buyPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,14 +64,6 @@
             this.PriceDataGrid.Size = new System.Drawing.Size(905, 772);
             this.PriceDataGrid.TabIndex = 0;
             // 
-            // marketByOrderBindingSource
-            // 
-            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
-            // 
-            // marketByPriceBindingSource
-            // 
-            this.marketByPriceBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByPrice);
-            // 
             // buyLabel
             // 
             this.buyLabel.AutoSize = true;
@@ -92,41 +84,61 @@
             this.SellLabel.TabIndex = 2;
             this.SellLabel.Text = "Sell";
             // 
+            // marketByOrderBindingSource
+            // 
+            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
+            // 
+            // marketByPriceBindingSource
+            // 
+            this.marketByPriceBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByPrice);
+            // 
             // buyNumber
             // 
+            this.buyNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.buyNumber.HeaderText = "#";
             this.buyNumber.Name = "buyNumber";
             this.buyNumber.ReadOnly = true;
+            this.buyNumber.Width = 85;
             // 
             // buyVolume
             // 
+            this.buyVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.buyVolume.HeaderText = "Volume";
             this.buyVolume.Name = "buyVolume";
             this.buyVolume.ReadOnly = true;
+            this.buyVolume.Width = 166;
             // 
             // buyPrice
             // 
+            this.buyPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.buyPrice.HeaderText = "Price";
             this.buyPrice.Name = "buyPrice";
             this.buyPrice.ReadOnly = true;
+            this.buyPrice.Width = 134;
             // 
             // sellPrice
             // 
+            this.sellPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.sellPrice.HeaderText = "Price";
             this.sellPrice.Name = "sellPrice";
             this.sellPrice.ReadOnly = true;
+            this.sellPrice.Width = 134;
             // 
             // sellVolume
             // 
+            this.sellVolume.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.sellVolume.HeaderText = "Volume";
             this.sellVolume.Name = "sellVolume";
             this.sellVolume.ReadOnly = true;
+            this.sellVolume.Width = 166;
             // 
             // sellNumber
             // 
+            this.sellNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.sellNumber.HeaderText = "#";
             this.sellNumber.Name = "sellNumber";
             this.sellNumber.ReadOnly = true;
+            this.sellNumber.Width = 85;
             // 
             // MarketByPriceFrm
             // 

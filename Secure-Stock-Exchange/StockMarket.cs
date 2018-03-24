@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    abstract class StockMarket
+    public abstract class StockMarket
     {
-        List<StockMarketDisplay> _stocks;
+        private List<StockMarketDisplay> _stocks;
         public abstract void Register(StockMarketDisplay o);
         public abstract void UnRegister(StockMarketDisplay o);
         public abstract void Notify();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Secure_Stock_Exchange
 {
-    abstract class StockMarketDisplay
+    public abstract class StockMarketDisplay
     {
         public abstract void Update(RealTimeData s);
     }
