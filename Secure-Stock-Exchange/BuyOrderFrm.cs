@@ -30,7 +30,6 @@ namespace Secure_Stock_Exchange
                 //Create new buy Order
                 BuyOrder buy = new BuyOrder(numShares, buyPrice);
                 //Register buy order
-                buy.Register()
             }
             catch (Exception ex)
             {

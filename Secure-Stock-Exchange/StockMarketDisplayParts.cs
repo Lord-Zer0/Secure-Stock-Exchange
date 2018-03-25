@@ -15,7 +15,7 @@ namespace Secure_Stock_Exchange
         public double openPrice;
         public double currentPrice;
         public double priceChange;
-        public int changePercentage;
+        public double changePercentage;
         public StockStateSummary(Company c)
         {
             this.companyName = c.companyName;
@@ -23,7 +23,7 @@ namespace Secure_Stock_Exchange
             this.openPrice = c.getLastPrice();
             this.currentPrice = c.getLastPrice();
             this.priceChange = 0.0;
-            this.changePercentage = 0;
+            this.changePercentage = 0.0;
         }
         public override void Update(RealTimeData s)
         {
@@ -31,7 +31,10 @@ namespace Secure_Stock_Exchange
             {
                 if(m.companyName == this.companyName)
                 {
-                    
+                    double lastPrice = this.currentPrice;
+                    this.currentPrice = m.getLastPrice();
+                    this.priceChange = currentPrice - lastPrice;
+                    this.changePercentage = (priceChange / lastPrice) * 100;
                 }
             }
         }
@@ -63,11 +66,11 @@ namespace Secure_Stock_Exchange
         public int askTotalPrice = 0;
         public MarketByPrice(Company c)
         {
-
+            
         }
         public override void Update(RealTimeData s)
         {
-            throw new NotImplementedException();
+            //Update RealtimeData
         }
     }
 }

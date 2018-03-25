@@ -30,6 +30,18 @@ namespace Secure_Stock_Exchange
         public override void Register(StockMarketDisplay o)
         {
             this.display.Add(o);
+            if (o is StockStateSummary)
+            {
+                //add to overall stock state
+            }
+            if (o is MarketByOrder)
+            {
+                //
+            }
+            if (o is MarketByPrice)
+            {
+                 //
+            }
         }
         public override void UnRegister(StockMarketDisplay o)
         {

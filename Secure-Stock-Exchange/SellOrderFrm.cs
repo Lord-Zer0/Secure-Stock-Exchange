@@ -31,7 +31,6 @@ namespace Secure_Stock_Exchange
                 //Create new sell Order
                 SellOrder sell = new SellOrder(numShares, sellPrice);
                 //Register sell order
-                
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
