@@ -24,6 +24,8 @@ namespace Secure_Stock_Exchange
             this.currentPrice = c.getLastPrice();
             this.priceChange = 0.0;
             this.changePercentage = 0.0;
+            Console.WriteLine("Test 5");
+            Console.ReadLine();
         }
         public override void Update(RealTimeData s)
         {
@@ -36,6 +38,8 @@ namespace Secure_Stock_Exchange
                     this.priceChange = currentPrice - lastPrice;
                     this.changePercentage = (priceChange / lastPrice) * 100;
                 }
+                Console.WriteLine("Test 6");
+                Console.ReadLine();
             }
         }
     }

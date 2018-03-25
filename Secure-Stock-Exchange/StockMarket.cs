@@ -8,7 +8,6 @@ namespace Secure_Stock_Exchange
 {
     public abstract class StockMarket
     {
-        private List<StockMarketDisplay> _stocks;
         public abstract void Register(StockMarketDisplay o);
         public abstract void UnRegister(StockMarketDisplay o);
         public abstract void Notify();

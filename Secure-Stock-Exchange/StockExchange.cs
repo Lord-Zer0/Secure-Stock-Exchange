@@ -18,6 +18,8 @@ namespace Secure_Stock_Exchange
             InitializeComponent();
             // Create and maintain the RealTimeData
             this._rtd = new RealTimeData();
+            Console.WriteLine("Test 1");
+            Console.ReadLine();
         }
 
         private void beginTradingToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,14 +94,14 @@ namespace Secure_Stock_Exchange
         private void stockStateSummaryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Open a new instance of stock state summary
-            StockStateSummaryFrm sssChild = new StockStateSummaryFrm();
+            StockStateSummaryFrm sssChild = new StockStateSummaryFrm(_rtd.stocks);
             // Collect all instances of data classes
-            List<StockStateSummary> sssList = new List<StockStateSummary>();
-            foreach (Company m in this._rtd.members)
-            {
-                StockStateSummary sssi = new StockStateSummary(m);
-                sssList.Add(sssi);
-            }
+            //List<StockStateSummary> sssList = new List<StockStateSummary>();
+            //foreach (Company m in this._rtd.members)
+            //{
+            //    StockStateSummary sssi = new StockStateSummary(m);
+            //    sssList.Add(sssi);
+            //}
             //Set parent form
             sssChild.MdiParent = this;
             //Display sss form

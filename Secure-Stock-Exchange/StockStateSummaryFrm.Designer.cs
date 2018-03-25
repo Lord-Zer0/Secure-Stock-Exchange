@@ -46,7 +46,6 @@
             // 
             // StateSummaryDataGrid
             // 
-            this.StateSummaryDataGrid.AutoGenerateColumns = false;
             this.StateSummaryDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StateSummaryDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyName,
@@ -57,7 +56,6 @@
             this.changeSymbol,
             this.changePercent,
             this.shareVolume});
-            this.StateSummaryDataGrid.DataSource = this.stockStateSummaryBindingSource;
             this.StateSummaryDataGrid.Location = new System.Drawing.Point(12, 12);
             this.StateSummaryDataGrid.Name = "StateSummaryDataGrid";
             this.StateSummaryDataGrid.ReadOnly = true;
