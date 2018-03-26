@@ -12,10 +12,18 @@ namespace Secure_Stock_Exchange
 {
     public partial class MarketByOrderFrm : Form
     {
-        private MarketByOrder _mbo;
-        public MarketByOrderFrm()
+        private List<MarketByOrder> _mbo;
+        public MarketByOrderFrm(List<MarketByOrder> market)
         {
             InitializeComponent();
+            this._mbo = market;
+            if (this._mbo != null)
+            {
+                foreach (var i in this._mbo)
+                {
+                    OrderDataGrid.Rows.Add(i.bidVolume, i.bidPrice, i.askPrice, i.askVolume);
+                }
+            }
         }
     }
 }

@@ -50,9 +50,18 @@ namespace Secure_Stock_Exchange
         public int bidVolume = 0;
         public double askPrice = 0.0;
         public int askVolume = 0;
-        public MarketByOrder(Company c)
+        public MarketByOrder(BuyOrder b, SellOrder s)
         {
-            
+            if (b != null)
+            {
+                this.bidPrice = b.getPrice();
+                this.bidVolume = b.orderSize;
+            }
+            if (s != null)
+            {
+                this.askPrice = s.getPrice();
+                this.askVolume = s.orderSize;
+            }
         }
         public override void Update(RealTimeData s)
         {
@@ -67,10 +76,21 @@ namespace Secure_Stock_Exchange
         public double bidTotalPrice = 0.0;
         public int askNo = 0;
         public int askTotalVolume = 0;
-        public int askTotalPrice = 0;
-        public MarketByPrice(Company c)
+        public double askTotalPrice = 0;
+        public MarketByPrice(int bNum, BuyOrder b, SellOrder s, int aNum)
         {
-            
+            if (b != null)
+            {
+                this.bidNo = bNum;
+                this.bidTotalPrice = b.getPrice();
+                this.bidTotalVolume = b.orderSize;
+            }
+            if (s != null)
+            {
+                this.askNo = aNum;
+                this.askTotalPrice = s.getPrice();
+                this.askTotalVolume = s.orderSize;
+            }
         }
         public override void Update(RealTimeData s)
         {

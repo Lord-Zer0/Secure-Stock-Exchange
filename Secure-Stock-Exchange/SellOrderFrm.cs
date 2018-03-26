@@ -31,6 +31,11 @@ namespace Secure_Stock_Exchange
                 //Create new sell Order
                 SellOrder sell = new SellOrder(numShares, sellPrice);
                 //Register sell order
+                Company c = this._stocks.Find(Company => Company.companyName.Equals(companyName));
+                sell.Register(c);
+                Console.WriteLine("Added new sell order");
+                Console.ReadLine();
+                c.Update();
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);

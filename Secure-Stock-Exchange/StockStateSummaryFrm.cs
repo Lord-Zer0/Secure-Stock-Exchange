@@ -21,7 +21,6 @@ namespace Secure_Stock_Exchange
 
             foreach (var i in this.stocks)
             {
-
                 //this.stockStateSummaryBindingSource.Add(i);
                 //this.StateSummaryDataGrid.Rows.Add(i);
                 Image img = Properties.Resources.noChange;
@@ -31,7 +30,7 @@ namespace Secure_Stock_Exchange
 
         private void StockStateSummaryFrm_Load(object sender, EventArgs e)
         {
-            //stockStateSummaryBindingSource.DataSource = (new stockStateSummaryDataSource()).MyDataSourceList;
+            
         }
 
     }

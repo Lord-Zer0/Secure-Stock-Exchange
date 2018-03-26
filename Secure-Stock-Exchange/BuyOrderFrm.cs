@@ -30,6 +30,11 @@ namespace Secure_Stock_Exchange
                 //Create new buy Order
                 BuyOrder buy = new BuyOrder(numShares, buyPrice);
                 //Register buy order
+                Company c = this._stocks.Find(Company => Company.companyName.Equals(companyName));
+                buy.Register(c);
+                Console.WriteLine("Added new buy order");
+                Console.ReadLine();
+                //c.Update();
             }
             catch (Exception ex)
             {

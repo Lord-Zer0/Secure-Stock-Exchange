@@ -31,56 +31,30 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketByOrderFrm));
             this.OrderDataGrid = new System.Windows.Forms.DataGridView();
-            this.SellLabel = new System.Windows.Forms.Label();
-            this.buyLabel = new System.Windows.Forms.Label();
-            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buyVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buyPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.SellLabel = new System.Windows.Forms.Label();
+            this.buyLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OrderDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marketByOrderBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // OrderDataGrid
             // 
-            this.OrderDataGrid.AutoGenerateColumns = false;
             this.OrderDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.OrderDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buyVolume,
             this.buyPrice,
             this.sellPrice,
             this.sellVolume});
-            this.OrderDataGrid.DataSource = this.marketByOrderBindingSource;
             this.OrderDataGrid.Location = new System.Drawing.Point(12, 71);
             this.OrderDataGrid.Name = "OrderDataGrid";
             this.OrderDataGrid.RowTemplate.Height = 40;
             this.OrderDataGrid.Size = new System.Drawing.Size(903, 781);
             this.OrderDataGrid.TabIndex = 0;
-            // 
-            // SellLabel
-            // 
-            this.SellLabel.AutoSize = true;
-            this.SellLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.SellLabel.Location = new System.Drawing.Point(604, 22);
-            this.SellLabel.Name = "SellLabel";
-            this.SellLabel.Size = new System.Drawing.Size(64, 32);
-            this.SellLabel.TabIndex = 4;
-            this.SellLabel.Text = "Sell";
-            // 
-            // buyLabel
-            // 
-            this.buyLabel.AutoSize = true;
-            this.buyLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buyLabel.Location = new System.Drawing.Point(244, 22);
-            this.buyLabel.Name = "buyLabel";
-            this.buyLabel.Size = new System.Drawing.Size(64, 32);
-            this.buyLabel.TabIndex = 3;
-            this.buyLabel.Text = "Buy";
-            // 
-            // marketByOrderBindingSource
-            // 
-            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
             // 
             // buyVolume
             // 
@@ -113,6 +87,30 @@
             this.sellVolume.Name = "sellVolume";
             this.sellVolume.ReadOnly = true;
             this.sellVolume.Width = 166;
+            // 
+            // marketByOrderBindingSource
+            // 
+            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
+            // 
+            // SellLabel
+            // 
+            this.SellLabel.AutoSize = true;
+            this.SellLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SellLabel.Location = new System.Drawing.Point(604, 22);
+            this.SellLabel.Name = "SellLabel";
+            this.SellLabel.Size = new System.Drawing.Size(64, 32);
+            this.SellLabel.TabIndex = 4;
+            this.SellLabel.Text = "Sell";
+            // 
+            // buyLabel
+            // 
+            this.buyLabel.AutoSize = true;
+            this.buyLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buyLabel.Location = new System.Drawing.Point(244, 22);
+            this.buyLabel.Name = "buyLabel";
+            this.buyLabel.Size = new System.Drawing.Size(64, 32);
+            this.buyLabel.TabIndex = 3;
+            this.buyLabel.Text = "Buy";
             // 
             // MarketByOrderFrm
             // 

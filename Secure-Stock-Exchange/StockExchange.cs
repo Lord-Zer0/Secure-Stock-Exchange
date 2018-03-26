@@ -32,11 +32,9 @@ namespace Secure_Stock_Exchange
         private void menuByPrice(Company c)
         {
             //Open a new instance of menu by price for sender
-            MarketByPriceFrm mbpChild = new MarketByPriceFrm();
+            MarketByPriceFrm mbpChild = new MarketByPriceFrm(c.priceMarket);
             //Change the form text
             mbpChild.Text += c.companyName;
-            //Create instance of data class
-            MarketByPrice mbp = new MarketByPrice(c);
             //Set parent form
             mbpChild.MdiParent = this;
             //Display mbp form
@@ -45,11 +43,9 @@ namespace Secure_Stock_Exchange
         private void menuByOrder(Company c)
         {
             //Open a new instance of menu by order for sender
-            MarketByOrderFrm mboChild = new MarketByOrderFrm();
+            MarketByOrderFrm mboChild = new MarketByOrderFrm(c.orderMarket);
             //Change the form text
             mboChild.Text += c.companyName;
-            //Create instance of data class
-            MarketByOrder mbp = new MarketByOrder(c);
             //Set parent form
             mboChild.MdiParent = this;
             //Display mbo form

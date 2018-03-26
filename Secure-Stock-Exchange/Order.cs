@@ -14,6 +14,7 @@ namespace Secure_Stock_Exchange
 
     public class BuyOrder : Order
     {
+        //public String oType = "buy";
         public DateTime orderDateTime;
         public int orderSize;
         private double _orderPrice;
@@ -34,13 +35,14 @@ namespace Secure_Stock_Exchange
         }
         public int Register(Company c)
         {
-            c.orders.Add(this);
+            c.bids.Add(this);
             return 0;
         }
     }
 
     public class SellOrder : Order
     {
+        //String oType = "sell";
         public DateTime orderDateTime;
         public int orderSize;
         private double _orderPrice;
@@ -61,7 +63,7 @@ namespace Secure_Stock_Exchange
         }
         public int Register(Company c)
         {
-            c.orders.Add(this);
+            c.asks.Add(this);
             return 0;
         }
     }

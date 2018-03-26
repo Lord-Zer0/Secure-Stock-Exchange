@@ -12,6 +12,7 @@ namespace Secure_Stock_Exchange
         public List<Company> members;
         public List<StockMarketDisplay> display;
         public List<StockStateSummary> stocks;
+        
         public RealTimeData()
         {
             // Here we can hard code the data we need
@@ -19,15 +20,14 @@ namespace Secure_Stock_Exchange
             this.members = new List<Company>();
             this.display = new List<StockMarketDisplay>();
             this.stocks = new List<StockStateSummary>();
+            
             // Declare Companies
             Company msft = new Company("Microsoft Corporation", "MSFT", 46.13);
             Company appl = new Company("Apple Inc.", "APPL", 105.22);
             Company fb = new Company("Facebook Inc.", "FB", 80.67);
-            Console.WriteLine("Test 2");
             Console.ReadLine();
             // Add members to list
             this.members.Add(msft);
-            Console.WriteLine("Test 3");
             Console.ReadLine();
             Console.WriteLine(msft);
             Console.ReadLine();

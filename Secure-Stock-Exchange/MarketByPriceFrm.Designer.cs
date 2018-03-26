@@ -31,16 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketByPriceFrm));
             this.PriceDataGrid = new System.Windows.Forms.DataGridView();
-            this.buyLabel = new System.Windows.Forms.Label();
-            this.SellLabel = new System.Windows.Forms.Label();
-            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.marketByPriceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.buyNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buyVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buyPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sellNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marketByOrderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buyLabel = new System.Windows.Forms.Label();
+            this.SellLabel = new System.Windows.Forms.Label();
+            this.marketByPriceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PriceDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marketByOrderBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.marketByPriceBindingSource)).BeginInit();
@@ -48,7 +48,6 @@
             // 
             // PriceDataGrid
             // 
-            this.PriceDataGrid.AutoGenerateColumns = false;
             this.PriceDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PriceDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.buyNumber,
@@ -57,40 +56,11 @@
             this.sellPrice,
             this.sellVolume,
             this.sellNumber});
-            this.PriceDataGrid.DataSource = this.marketByOrderBindingSource;
             this.PriceDataGrid.Location = new System.Drawing.Point(11, 67);
             this.PriceDataGrid.Name = "PriceDataGrid";
             this.PriceDataGrid.RowTemplate.Height = 40;
             this.PriceDataGrid.Size = new System.Drawing.Size(905, 772);
             this.PriceDataGrid.TabIndex = 0;
-            // 
-            // buyLabel
-            // 
-            this.buyLabel.AutoSize = true;
-            this.buyLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.buyLabel.Location = new System.Drawing.Point(238, 13);
-            this.buyLabel.Name = "buyLabel";
-            this.buyLabel.Size = new System.Drawing.Size(64, 32);
-            this.buyLabel.TabIndex = 1;
-            this.buyLabel.Text = "Buy";
-            // 
-            // SellLabel
-            // 
-            this.SellLabel.AutoSize = true;
-            this.SellLabel.Cursor = System.Windows.Forms.Cursors.Default;
-            this.SellLabel.Location = new System.Drawing.Point(598, 13);
-            this.SellLabel.Name = "SellLabel";
-            this.SellLabel.Size = new System.Drawing.Size(64, 32);
-            this.SellLabel.TabIndex = 2;
-            this.SellLabel.Text = "Sell";
-            // 
-            // marketByOrderBindingSource
-            // 
-            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
-            // 
-            // marketByPriceBindingSource
-            // 
-            this.marketByPriceBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByPrice);
             // 
             // buyNumber
             // 
@@ -139,6 +109,34 @@
             this.sellNumber.Name = "sellNumber";
             this.sellNumber.ReadOnly = true;
             this.sellNumber.Width = 85;
+            // 
+            // marketByOrderBindingSource
+            // 
+            this.marketByOrderBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByOrder);
+            // 
+            // buyLabel
+            // 
+            this.buyLabel.AutoSize = true;
+            this.buyLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.buyLabel.Location = new System.Drawing.Point(238, 13);
+            this.buyLabel.Name = "buyLabel";
+            this.buyLabel.Size = new System.Drawing.Size(64, 32);
+            this.buyLabel.TabIndex = 1;
+            this.buyLabel.Text = "Buy";
+            // 
+            // SellLabel
+            // 
+            this.SellLabel.AutoSize = true;
+            this.SellLabel.Cursor = System.Windows.Forms.Cursors.Default;
+            this.SellLabel.Location = new System.Drawing.Point(598, 13);
+            this.SellLabel.Name = "SellLabel";
+            this.SellLabel.Size = new System.Drawing.Size(64, 32);
+            this.SellLabel.TabIndex = 2;
+            this.SellLabel.Text = "Sell";
+            // 
+            // marketByPriceBindingSource
+            // 
+            this.marketByPriceBindingSource.DataSource = typeof(Secure_Stock_Exchange.MarketByPrice);
             // 
             // MarketByPriceFrm
             // 
